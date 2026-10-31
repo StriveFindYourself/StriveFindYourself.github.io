@@ -1,0 +1,27 @@
+/* ============================================================
+ * 自定义样式（覆盖 NexT 默认样式）
+ * 改完保存 → 预览页面会自动刷新；发布时随 hexo generate 一起打包。
+ * 写 CSS 变量优先，比直接改具体元素更稳。
+ * ============================================================ */
+
+/* --- 示例 1：改正文的字号和行高 ---
+.post-body {
+  font-size: 16px;
+  line-height: 1.9;
+}
+*/
+
+/* --- 示例 2：改代码块背景 ---
+code, pre {
+  background: #f6f8fa !important;
+}
+*/
+
+/* --- 示例 3：隐藏侧栏，改成单栏阅读布局 ---
+.sidebar-toggle, .sidebar { display: none !important; }
+.main-inner { width: 100% !important; }
+*/
+
+/* --- 示例 4：改菜单栏颜色 ---
+.header-inner { background: rgba(255, 255, 255, 0.9) !important; }
+*/
