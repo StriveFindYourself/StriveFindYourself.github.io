@@ -1,27 +1,38 @@
 /* ============================================================
- * 自定义样式（覆盖 NexT 默认样式）
- * 改完保存 → 预览页面会自动刷新；发布时随 hexo generate 一起打包。
- * 写 CSS 变量优先，比直接改具体元素更稳。
+ * 自定义样式（Butterfly）
+ * 已通过 _config.butterfly.yml 的 inject.head 引入，改完保存即生效。
+ * 优先用主题配置项改，配置改不了的再写 CSS 覆盖。
  * ============================================================ */
 
-/* --- 示例 1：改正文的字号和行高 ---
-.post-body {
+/* --- 示例 1：正文排版 ---
+#article-container {
   font-size: 16px;
   line-height: 1.9;
 }
 */
 
-/* --- 示例 2：改代码块背景 ---
-code, pre {
-  background: #f6f8fa !important;
+/* --- 示例 2：首页大图高度（默认整屏，改小一点让文章更早出现）---
+#page-header.full_page {
+  height: 70vh !important;
 }
 */
 
-/* --- 示例 3：隐藏侧栏，改成单栏阅读布局 ---
-.sidebar-toggle, .sidebar { display: none !important; }
-.main-inner { width: 100% !important; }
+/* --- 示例 3：卡片圆角与阴影 ---
+.card-widget,
+.recent-post-item {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
 */
 
-/* --- 示例 4：改菜单栏颜色 ---
-.header-inner { background: rgba(255, 255, 255, 0.9) !important; }
+/* --- 示例 4：导航栏磨砂玻璃 ---
+#page-header.nav-fixed #nav {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px);
+}
+*/
+
+/* --- 示例 5：隐藏侧栏，做单栏阅读 ---
+#aside-content { display: none !important; }
+#recent-posts, #page { width: 100% !important; }
 */
